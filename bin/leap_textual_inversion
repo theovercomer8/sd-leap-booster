@@ -446,7 +446,7 @@ def boost_embed(leap, images_folder):
                 images = torch.cat((images, image), 0)
         return images
 
-    images = load_images(images_folder)
+    grid = load_images(images_folder)
     # Simulate single item batch
     grid = grid.unsqueeze(0)
     embed_model = leap(grid)
